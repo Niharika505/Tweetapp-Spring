@@ -1,0 +1,27 @@
+server:
+    port: 8081
+spring:
+  profiles:
+    active: nonprod
+---
+spring:
+  profiles: dev
+  data.mongodb:
+    host: localhost
+    port: 27017
+    database: tweetappdb
+---
+spring:
+  profiles: nonprod
+  data.mongodb:
+    host: localhost
+    port: 27017
+    database: tweetappdb
+---
+spring:
+  profiles: prod
+  data.mongodb:
+    host: localhost
+    port: 27017
+    database: tweetappdb
+  
